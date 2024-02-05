@@ -1,0 +1,53 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 02.02.2024 19:53:24
+// Design Name: 
+// Module Name: one_bit_comparator
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Vivado_1_Parte_22(
+    input logic A,
+    input logic B,
+    input logic As,
+    input logic Bs,
+    input logic Cin,
+    output logic Cout,
+    output logic S2,
+    output logic S1
+    );
+    // signal declaration
+    logic C1,C2,C3,C4,C5,C6,C7,C8,C9,C10;
+    
+    // body
+    // sum of two prduct terms
+    assign Cout = C10;
+    assign S2 = C3;
+    assign S1 = C8;
+
+    // product terms
+    assign C1 = A ^ B;
+    assign C2 = A & B;
+    assign C3 = Cin ^ C1;
+    assign C4 = Cin & C1;
+    assign C5 = C4 | C2;
+    assign C6 = As ^ Bs;
+    assign C7 = As & Bs;
+    assign C8 = C5 ^ C6;
+    assign C9 = C5 & C6;
+    assign C10 = C7 | C9;
+endmodule
